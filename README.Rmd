@@ -1,18 +1,28 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # bspline
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bspline is to fit a regression spline estimator based on a
-set of data $\{(x_i, y_i)\}_{i=1}^n$.
+The goal of bspline is to fit a regression spline estimator based on a set of data $\{(x_i, y_i)\}_{i=1}^n$.
 
 ## Installation
 
-You can install the development version of bspline from
-[GitHub](https://github.com/) with:
+You can install the development version of bspline from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
@@ -23,7 +33,7 @@ pak::pak("pky53887-tech/bspline")
 
 This is a basic example which shows you how to solve a common problem:
 
-``` r
+```{r example}
 library(BsplineReg)
 set.seed(923)  
 n = 30
@@ -44,4 +54,5 @@ grid_x = seq(min(x_values), max(x_values), length.out = 100)
 plot_spline(x_values, y_values, model, grid_x)
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+
+
